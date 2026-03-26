@@ -1,1 +1,0 @@
-import fs from 'fs';import path from 'path';const SOURCE='./assets';const DEST='./public';console.log('Syncing...');if(!fs.existsSync(SOURCE)){console.error('No assets');process.exit(1);}if(!fs.existsSync(DEST))fs.mkdirSync(DEST);for(const f of fs.readdirSync(SOURCE)){fs.copyFileSync(path.join(SOURCE,f),path.join(DEST,f));console.log('Synced: '+f);}console.log('Done');
