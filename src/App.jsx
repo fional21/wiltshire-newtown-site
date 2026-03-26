@@ -27,8 +27,6 @@ export default function NewTownExperience() {
   transition={{ delay: 0.5 }}
   src="/intro.mp4"
   className="w-full max-w-4xl rounded-xl shadow-xl border border-soft-green"
-  autoPlay
-  muted
   playsInline
   onEnded={goToExplore}
 />
