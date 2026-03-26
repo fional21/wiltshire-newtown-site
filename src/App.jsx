@@ -21,16 +21,18 @@ export default function NewTownExperience() {
         </div>
         <motion.h1 initial={{opacity:0,y:-20}} animate={{opacity:1,y:0}} className='text-6xl font-extrabold tracking-tight text-main-green'>Wiltshire Council New Town</motion.h1>
         <p className='text-2xl text-charcoal max-w-3xl leading-relaxed opacity-90'>Creation of a beautifully designed new town in Wiltshire, blending sustainability, community and timeless design into a vibrant, thriving & healthy place.</p> 
+
 <motion.video
   initial={{ opacity: 0 }}
   animate={{ opacity: 1 }}
   transition={{ delay: 0.5 }}
   src="/intro.mp4"
   className="w-full max-w-4xl rounded-xl shadow-xl border border-soft-green"
+  controls
   playsInline
   onEnded={goToExplore}
 />
-
+``
       </motion.div>)}
       {route==='explore' && (<motion.div key='explore' {...fade} className='flex flex-col items-center p-10 text-center space-y-10'>
         <h2 className='text-5xl font-bold text-main-green'>Explore the Vision</h2>
