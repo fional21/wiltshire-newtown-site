@@ -21,7 +21,6 @@ export default function NewTownExperience() {
         </div>
         <motion.h1 initial={{opacity:0,y:-20}} animate={{opacity:1,y:0}} className='text-6xl font-extrabold tracking-tight text-main-green'>Wiltshire Council New Town</motion.h1>
         <p className='text-2xl text-charcoal max-w-3xl leading-relaxed opacity-90'>Creation of a beautifully designed new town in Wiltshire, blending sustainability, community and timeless design into a vibrant, thriving & healthy place.</p> 
-
 <motion.video
   initial={{ opacity: 0 }}
   animate={{ opacity: 1 }}
