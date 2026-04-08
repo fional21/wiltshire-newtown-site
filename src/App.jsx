@@ -42,7 +42,7 @@ useEffect(() => {
     />
 
     {/* Content layer */}
-    <div className="relative z-10 flex flex-col items-center justify-center min-h-screen pt-24">
+<div className="relative z-10 flex flex-col items-center justify-center min-h-screen pt-24 bg-transparent">
 
       {/* Laptop screen area */}
       <div className="relative w-[60%] max-w-3xl aspect-[16/10] mt-20">
