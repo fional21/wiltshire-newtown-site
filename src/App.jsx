@@ -45,7 +45,17 @@ useEffect(() => {
 <div className="relative z-10 flex flex-col items-center justify-center min-h-screen pt-24 bg-transparent">
 
       {/* Laptop screen area */}
-      <div className="relative w-[60%] max-w-3xl aspect-[16/10] mt-20">
+      
+div
+  className="absolute"
+  style={{
+    top: "28%",
+    left: "20%",
+    width: "60%",
+    height: "38%",
+  }}
+>
+
 
         <motion.video
           ref={(video) => {
