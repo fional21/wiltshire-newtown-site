@@ -35,11 +35,59 @@ useEffect(() => {
     </div>
 
     {/* Background image */}
-    <img
-      src="/laptop.jpg"
-      alt="Laptop on desk"
-      className="absolute inset-0 w-full h-full object-cover"
+
+{/* Laptop background container */}
+<div className=" on desk"<div className="relative w-full h-full">
+    className="w-full h-full object-cover"
+  />
+
+  {/* Laptop screen area */}
+  <div
+    className="absolute"
+    style={{
+      top: "28%",
+      left: "20%",
+      width: "60%",
+      height: "38%",
+    }}
+  >
+    <motion.video
+      ref={(video) => {
+        if (video && isPlaying) {
+          video.play();
+        }
+      }}
+      src="/intro.mp4"
+      className="w-full h-full object-cover rounded-sm"
+      playsInline
+      onEnded={goToExplore}
     />
+
+    {!isPlaying && (
+      <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/40">
+        <button
+          onClick={() => setIsPlaying(true)}
+          className="bg-white text-charcoal px-8 py-4 rounded-full text-lg font-semibold shadow hover:bg-cream transition"
+        >
+          ▶ Play vision film
+        </button>
+
+        <button
+          onClick={goToExplore}
+          className="mt-4 text-white underline text-sm hover:text-cream"
+        >
+          Skip intro
+        </button>
+      </div>
+    )}
+  </div>
+
+</div>
+
+  {/* Laptop image */}
+  <img
+    src="/laptop.jpg"
+
 
     {/* Content layer */}
 <div className="relative z-10 flex flex-col items-center justify-center min-h-screen pt-24 bg-transparent">
