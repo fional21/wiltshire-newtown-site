@@ -70,10 +70,7 @@ export default function NewTownExperience() {
                 alt="Laptop on desk"
                 className="absolute inset-0 w-full h-full object-cover"
               />
-
               {/* Video inside laptop screen */}
-            
-
 <div
   className=
 style={{
@@ -83,8 +80,6 @@ style={{
   height: "22%",
 }}
 >
-
-
                 <motion.video
                   ref={(video) => {
                     if (video && isPlaying) {
