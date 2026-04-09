@@ -1,9 +1,23 @@
 import React from "react";
 
 export default function App() {
-return ( 
-<div style={{ padding: "40px" }}>
-<h1>UI rebuild starts here</h1>
+return (
+<div style={{ background: "#eee", minHeight: "100vh", paddingTop: "80px" }}>
+<h1 style={{ textAlign: "center" }}>UI rebuild</h1>
+
+<div 
+style={{ 
+maxWidth: "900px", 
+margin: "40px auto", 
+position: "relative" 
+}}
+>
+<img
+src="/laptop.jpg"
+alt="Laptop"
+style={{ width: "100%, display: "block" }}
+/>
+</div>
 </div>
 );
 }
