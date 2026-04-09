@@ -78,7 +78,7 @@ export default function NewTownExperience() {
 
     alt="Laptop on desk"
 
-    className="w-full h-auto"
+    className="w-full h-auto block"
 
   />
 
@@ -88,7 +88,7 @@ export default function NewTownExperience() {
 
   <div
 
-    className="absolute"
+    className="absolute z-10"
 
     style={{
 
@@ -134,7 +134,7 @@ export default function NewTownExperience() {
 
           onClick={() => setIsPlaying(true)}
 
-          className="bg-white text-charcoal px-8 py-4 rounded-full text-lg font-semibold shadow hover:bg-cream transition"
+          className="bg-white text-charcoal px-8 py-4 rounded-full font-semibold shadow"
 
         >
 
@@ -148,7 +148,7 @@ export default function NewTownExperience() {
 
           onClick={goToExplore}
 
-          className="mt-4 text-white underline text-sm hover:text-cream"
+          className="mt-4 text-white underline text-sm"
 
         >
 
@@ -162,6 +162,7 @@ export default function NewTownExperience() {
 
   </div>
 
+</div>
 </div>
 
                 {!isPlaying && (
