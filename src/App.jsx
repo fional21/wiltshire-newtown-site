@@ -106,23 +106,15 @@ export default function NewTownExperience() {
 
         {route === "home" && (
 
-          <motion.div
-
-            key="home"
-
-            {...fade}
-
-            className="relative min-h-screen overflow-hidden"
-
-          >
+          <motion.div key="home" {...fade} className="relative min-h-screen">
 
  
 
-            {/* Header bar */}
+            {/* Header */}
 
             <div className="fixed top-0 left-0 right-0 h-20 bg-black z-20 flex items-center justify-center">
 
-              <div className="flex items-center space-x-10">
+              <div className="flex space-x-10">
 
                 <img src="/logo1.png" alt="Logo 1" className="h-10" />
 
@@ -136,7 +128,7 @@ export default function NewTownExperience() {
 
             {/* Laptop */}
 
-            <div className="relative w-full max-w-6xl mx-auto pt-24">
+            <div className="relative w-full max-w-6xl mx-auto pt-28">
 
               <img
 
@@ -150,11 +142,11 @@ export default function NewTownExperience() {
 
  
 
-              {/* Screen overlay */}
+              {/* Screen video */}
 
               <div
 
-                className="absolute z-10"
+                className="absolute"
 
                 style={{
 
@@ -172,11 +164,7 @@ export default function NewTownExperience() {
 
                 <motion.video
 
-                  ref={(video) => {
-
-                    if (video && isPlaying) video.play();
-
-                  }}
+                  ref={(video) => video && isPlaying && video.play()}
 
                   src="/intro.mp4"
 
@@ -208,8 +196,6 @@ export default function NewTownExperience() {
 
                     </button>
 
- 
-
                     <button
 
                       onClick={goToExplore}
@@ -230,8 +216,6 @@ export default function NewTownExperience() {
 
  
 
-              {/* Caption */}
-
               <p className="absolute bottom-16 left-1/2 -translate-x-1/2 text-lg bg-white/70 px-6 py-3 rounded text-center max-w-xl">
 
                 A short film introducing the vision for a new, sustainable town in Wiltshire.
@@ -250,23 +234,9 @@ export default function NewTownExperience() {
 
         {route === "explore" && (
 
-          <motion.div
+          <motion.div key="explore" {...fade} className="flex flex-col items-center p-10 space-y-10">
 
-            key="explore"
-
-            {...fade}
-
-            className="flex flex-col items-center p-10 text-center space-y-10"
-
-          >
-
-            <h2 className="text-5xl font-bold text-main-green">
-
-              Explore the Vision
-
-            </h2>
-
- 
+            <h2 className="text-5xl font-bold text-main-green">Explore the Vision</h2>
 
             <p className="text-lg max-w-2xl opacity-90">
 
@@ -284,77 +254,21 @@ export default function NewTownExperience() {
 
                 alt="Concept"
 
-                className="rounded-xl shadow-xl w-full border border-soft-green"
+                className="rounded-xl shadow-xl w-full"
 
               />
 
  
 
-              <button
-
-                className="absolute top-10 left-10 bg-main-green text-white px-6 py-3 rounded-full shadow"
-
-                onClick={() => playVideo("transport.mp4")}
-
-              >
+              <button className="absolute top-10 left-10 bg-main-green text-white px-6 py-3 rounded-full" onClick={() => playVideo("transport.mp4")}>
 
                 Transport
 
               </button>
 
- 
-
-              <button
-
-                className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-accent-blue text-white px-6 py-3 rounded-full shadow"
-
-                onClick={() => playVideo("greenspaces.mp4")}
-
-              >
+              <button className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 bg-accent-blue text-white px-6 py-3 rounded-full" onClick={() => playVideo("greenspaces.mp4")}>
 
                 Green Spaces
-
-              </button>
-
- 
-
-              <button
-
-                className="absolute bottom-10 right-10 bg-main-green text-white px-6 py-3 rounded-full shadow"
-
-                onClick={() => playVideo("housing.mp4")}
-
-              >
-
-                Housing
-
-              </button>
-
- 
-
-              <button
-
-                className="absolute top-1/4 right-1/3 bg-accent-blue text-white px-6 py-3 rounded-full shadow"
-
-                onClick={() => playVideo("towncentre.mp4")}
-
-              >
-
-                Town Centre
-
-              </button>
-
- 
-
-              <button
-
-                className="absolute bottom-1/4 left-1/3 bg-main-green text-white px-6 py-3 rounded-full shadow"
-
-                onClick={() => playVideo("mobilityhub.mp4")}
-
-              >
-
-                Mobility Hub
 
               </button>
 
@@ -370,21 +284,13 @@ export default function NewTownExperience() {
 
         {route === "video" && (
 
-          <motion.div
-
-            key="video"
-
-            {...fade}
-
-            className="flex flex-col items-center p-10 space-y-10 text-center"
-
-          >
+          <motion.div key="video" {...fade} className="flex flex-col items-center p-10 space-y-10">
 
             <video
 
               src={`/${videoToPlay}`}
 
-              className="w-full max-w-5xl rounded-xl shadow-xl border border-main-green"
+              className="w-full max-w-5xl rounded-xl"
 
               autoPlay
 
@@ -392,13 +298,11 @@ export default function NewTownExperience() {
 
             />
 
- 
-
             <button
 
               onClick={returnToExplore}
 
-              className="px-8 py-4 bg-charcoal text-white rounded-full shadow hover:bg-main-green transition text-lg"
+              className="px-8 py-4 bg-charcoal text-white rounded-full"
 
             >
 
