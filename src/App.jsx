@@ -75,7 +75,7 @@ export default function NewTownExperience() {
             
 
 <div
-  className="absolute border-4 border-red-500"
+  className=
 style={{
   top: "34%",
   left: "23%",
