@@ -73,15 +73,17 @@ export default function NewTownExperience() {
 
               {/* Video inside laptop screen */}
             
+
 <div
-  className="absolute"
+  className="absolute border-4 border-red-500"
   style={{
-    top: "32%",
-    left: "22%",
-    width: "56%",
-    height: "28%",
+    top: "45%",
+    left: "10%",
+    width: "80%",
+    height: "20%",
   }}
 >
+
 
                 <motion.video
                   ref={(video) => {
