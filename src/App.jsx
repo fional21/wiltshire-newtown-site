@@ -2,7 +2,13 @@ import React from "react";
 
 export default function App() {
 return (
-<div style={{ background: "#eee", minHeight: "100vh", paddingTop: "80px" }}>
+<div 
+style={{ 
+background: "#eee", 
+minHeight: "100vh", 
+paddingTop: "80px", 
+}}
+>
 <h1 style={{ textAlign: "center" }}>UI rebuild</h1>
 
 <div 
