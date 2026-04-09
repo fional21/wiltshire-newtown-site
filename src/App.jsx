@@ -76,12 +76,12 @@ export default function NewTownExperience() {
 
 <div
   className="absolute border-4 border-red-500"
-  style={{
-    top: "45%",
-    left: "10%",
-    width: "80%",
-    height: "20%",
-  }}
+style={{
+  top: "34%",
+  left: "23%",
+  width: "54%",
+  height: "22%",
+}}
 >
 
 
