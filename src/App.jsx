@@ -23,8 +23,9 @@ useEffect(() => {
         <p className='text-xl font-medium text-charcoal opacity-80'>Loading Wiltshire New Town…</p>
       </motion.div>)}
 
+
 {route === 'home' && (
-  <motion.div key="home" {...fade} className="relative min-h-screen">
+  <motion.div key="home" {...fade} className="relative min-h-screen overflow-hidden">
 
     {/* Fixed black top bar */}
     <div className="fixed top-0 left-0 right-0 h-20 bg-black z-20 flex items-center justify-center">
@@ -34,52 +35,66 @@ useEffect(() => {
       </div>
     </div>
 
-    {/* Background image */}
+    {/* Laptop + video container */}
+    <div className="relative w-full h-screen pt-20">
 
-{/* Laptop background container */}
-<div className=" on desk"<div className="relative w-full h-full">
-    className="w-full h-full object-cover"
-  />
+      {/* Laptop background */}
+      <img
+        src="/laptop.jpg"
+        alt="Laptop on desk"
+        className="absolute inset-0 w-full h-full object-cover"
+      />
 
-  {/* Laptop screen area */}
-  <div
-    className="absolute"
-    style={{
-      top: "28%",
-      left: "20%",
-      width: "60%",
-      height: "38%",
-    }}
-  >
-    <motion.video
-      ref={(video) => {
-        if (video && isPlaying) {
-          video.play();
-        }
-      }}
-      src="/intro.mp4"
-      className="w-full h-full object-cover rounded-sm"
-      playsInline
-      onEnded={goToExplore}
-    />
+      {/* Video positioned inside laptop screen */}
+      <div
+        className="absolute"
+        style={{
+          top: "28%",
+          left: "20%",
+          width: "60%",
+          height: "38%",
+        }}
+      >
+        <motion.video
+          ref={(video) => {
+            if (video && isPlaying) {
+              video.play();
+            }
+          }}
+          src="/intro.mp4"
+          className="w-full h-full object-cover rounded-sm"
+          playsInline
+          onEnded={goToExplore}
+        />
 
-    {!isPlaying && (
-      <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/40">
-        <button
-          onClick={() => setIsPlaying(true)}
-          className="bg-white text-charcoal px-8 py-4 rounded-full text-lg font-semibold shadow hover:bg-cream transition"
-        >
-          ▶ Play vision film
-        </button>
+        {!isPlaying && (
+          <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/40">
+            <button
+              onClick={() => setIsPlaying(true)}
+              className="bg-white text-charcoal px-8 py-4 rounded-full text-lg font-semibold shadow hover:bg-cream transition"
+            >
+              ▶ Play vision film
+            </button>
 
-        <button
-          onClick={goToExplore}
-          className="mt-4 text-white underline text-sm hover:text-cream"
-        >
-          Skip intro
-        </button>
+            <button
+              onClick={goToExplore}
+              className="mt-4 text-white underline text-sm hover:text-cream"
+            >
+              Skip intro
+            </button>
+          </div>
+        )}
       </div>
-    )}
+
+      {/* Caption on desk */}
+      <p className="absolute bottom-16 left-1/2 -translate-x-1/2 text-lg text-charcoal bg-white/70 px-6 py-3 rounded text-center max-w-xl">
+        A short film introducing the vision for a new, sustainable town in Wiltshire.
+      </p>
+
+    </div>
+  </motion.div>
+)}
+``
   </div>
 
 </div>
