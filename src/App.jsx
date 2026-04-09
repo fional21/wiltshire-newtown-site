@@ -5,10 +5,7 @@ return (
 
 <div style={{ maxWidth: 900, margin: "40px auto", position: "relative" }}>
 <img
-src="/laptop.jpg"
-alt="Laptop"
-style={{ width: "100%", display: "block" }}
-/>
+/laptop.jpg"
 </div>
 </div>
 );
