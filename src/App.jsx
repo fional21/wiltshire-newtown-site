@@ -64,7 +64,7 @@ export default function NewTownExperience() {
             </div>
 
             {/* Laptop background */}
-            <div className="relative w-full h-screen pt-20">
+            <div className="relative w-full pt-20 aspect-[3/2]">
               <img
                 src="/laptop.jpg"
                 alt="Laptop on desk"
