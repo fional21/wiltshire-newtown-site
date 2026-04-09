@@ -66,34 +66,103 @@ export default function NewTownExperience() {
               </div>
             </div>
 
-            {/* Laptop background */}
-            <div className="relative w-full pt-20 aspect-[3/2]">
-              <img
-                src="/laptop.jpg"
-                alt="Laptop on desk"
-                className="absolute inset-0 w-full h-full object-cover"
-              />
-              {/* Video inside laptop screen */}
-<div
-  className="absolute"
-style={{
-  top: "34%",
-  left: "23%",
-  width: "54%",
-  height: "22%",
-}}
->
-                <motion.video
-                  ref={(video) => {
-                    if (video && isPlaying) {
-                      video.play();
-                    }
-                  }}
-                  src="/intro.mp4"
-                  className="w-full h-full object-cover rounded-sm"
-                  playsInline
-                  onEnded={goToExplore}
-                />
+{/* Laptop background */}
+
+<div className="relative w-full max-w-6xl mx-auto">
+
+  {/* Laptop image */}
+
+  <img
+
+    src="/laptop.jpg"
+
+    alt="Laptop on desk"
+
+    className="w-full h-auto"
+
+  />
+
+ 
+
+  {/* Laptop screen overlay */}
+
+  <div
+
+    className="absolute"
+
+    style={{
+
+      top: "32%",
+
+      left: "22%",
+
+      width: "56%",
+
+      height: "36%",
+
+    }}
+
+  >
+
+    <motion.video
+
+      ref={(video) => {
+
+        if (video && isPlaying) video.play();
+
+      }}
+
+      src="/intro.mp4"
+
+      className="w-full h-full object-cover rounded-sm"
+
+      playsInline
+
+      muted
+
+      onEnded={goToExplore}
+
+    />
+
+ 
+
+    {!isPlaying && (
+
+      <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/40">
+
+        <button
+
+          onClick={() => setIsPlaying(true)}
+
+          className="bg-white text-charcoal px-8 py-4 rounded-full text-lg font-semibold shadow hover:bg-cream transition"
+
+        >
+
+          ▶ Play vision film
+
+        </button>
+
+ 
+
+        <button
+
+          onClick={goToExplore}
+
+          className="mt-4 text-white underline text-sm hover:text-cream"
+
+        >
+
+          Skip intro
+
+        </button>
+
+      </div>
+
+    )}
+
+  </div>
+
+</div>
 
                 {!isPlaying && (
                   <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/40">
