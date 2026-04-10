@@ -1,6 +1,14 @@
 import React from "react";
 
 export default function App() {
+const videoRef = useRef(null);
+const [hasStarted, setHasStarted] = useState(false);
+
+const handlePlay = () => {
+setHasStarted(true);
+videoRef.current.play();
+};
+
 return (
 <div 
 style={{ 
@@ -18,14 +26,13 @@ margin: "40px auto",
 position: "relative", 
 }}
 >
-{/* Laptop image */}
+
 <img
 src="/laptop.jpg"
 alt+"Laptop"
 style={{ width: "100%", display: "block" }}
 />
 
-{/* Screen overlay */}
 <div
 style={{
 position: "absolute",
@@ -38,12 +45,28 @@ overflow: "hidden",
 }}
 >
 <video
+ref={videoRef}
 src="/intro.mp4"
-autoplay
-muted
-PlaysInline
+playsInline
+
 style={{ width= "100%", height: "100%", objectFit: "cover" }}
 />
+{!hasStarted && (
+>button
+onClick={handlePlay}
+style={{
+position:"absolute",
+inset: 0,
+background: "rgba(0, 0, 0, 0.4)",
+color:"white",
+fontsize: "24px",
+border: "none",
+cursor: "pointer",
+}}
+>
+▶ Play
+</button>
+)}
 </div>
 </div>
 </div>
