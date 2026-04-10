@@ -24,6 +24,8 @@ style={{
 maxWidth: "900px", 
 margin: "40px auto", 
 position: "relative", 
+border: "4px solid red",
+minHeight: "500px"
 }}
 >
 
