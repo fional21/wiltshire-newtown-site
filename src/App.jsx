@@ -19,11 +19,22 @@ margin: "40px auto",
 position: "relative" 
 }}
 >
-<img
-src="/laptop.jpg"
-alt="Laptop"
-style={{ width: "100%", display: "block" }}
-/>
+{/* Laptop image */}
+/laptop.jpg
+
+{/* Screen overlay */}
+<div
+style={{
+position: "absolute",
+top: "32%",
+left: "22%",
+width: "56%",
+height: "36%",
+background: "black",
+}}
+>
+/intro.mp4
+</div>
 </div>
 </div>
 );
