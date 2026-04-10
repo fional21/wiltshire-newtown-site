@@ -22,7 +22,7 @@ position: "relative"
 <img
 src="/laptop.jpg"
 alt="Laptop"
-style={{ width: "100%, display: "block" }}
+style={{ width: "100%", display: "block" }}
 />
 </div>
 </div>
