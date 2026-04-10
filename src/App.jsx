@@ -16,7 +16,7 @@ textAlign: "center",
 style={{ 
 maxWidth: "900px", 
 margin: "40px auto", 
-position: "relative" 
+position: "relative", 
 }}
 >
 {/* Laptop image */}
