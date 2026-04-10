@@ -11,7 +11,6 @@ textAlign: "center",
 }}
 >
 <h1>UI rebuild</h1>
-
 <div 
 style={{ 
 maxWidth: "900px", 
@@ -20,7 +19,11 @@ position: "relative",
 }}
 >
 {/* Laptop image */}
-/laptop.jpg
+<img
+src="/laptop.jpg"
+alt+"Laptop"
+style={{ width: "100%", display: "block" }}
+/>
 
 {/* Screen overlay */}
 <div
@@ -31,9 +34,16 @@ left: "22%",
 width: "56%",
 height: "36%",
 background: "black",
+overflow: "hidden",
 }}
 >
-/intro.mp4
+<video
+src="/intro.mp4"
+autoplay
+muted
+PlaysInline
+style={{ width= "100%", height: "100%", objectFit: "cover" }}
+/>
 </div>
 </div>
 </div>
