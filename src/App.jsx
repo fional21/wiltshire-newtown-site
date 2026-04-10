@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 
 export default function App() {
 const videoRef = useRef(null);
@@ -29,7 +29,7 @@ position: "relative",
 
 <img
 src="/laptop.jpg"
-alt+"Laptop"
+alt="Laptop"
 style={{ width: "100%", display: "block" }}
 />
 
@@ -49,10 +49,11 @@ ref={videoRef}
 src="/intro.mp4"
 playsInline
 
-style={{ width= "100%", height: "100%", objectFit: "cover" }}
+style={{ width= "100%", height: "100%", objectFit: "cover" 
+}}
 />
 {!hasStarted && (
->button
+<button
 onClick={handlePlay}
 style={{
 position:"absolute",
